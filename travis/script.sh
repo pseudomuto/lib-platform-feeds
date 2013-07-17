@@ -1,4 +1,6 @@
 #!/bin/sh
 set -e
 
-xctool -workspace src/PlatformLib.xcworkspace -scheme PlatformLib build test
+cd src/
+pod install
+xctool -workspace PlatformLib.xcworkspace -scheme PlatformLib build test
