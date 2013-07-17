@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-xctool -workspace src/PlatformLib -scheme PlatformLib build test
+xctool -workspace src/PlatformLib.xcworkspace -scheme PlatformLib build test
