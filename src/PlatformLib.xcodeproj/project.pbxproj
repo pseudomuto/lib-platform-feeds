@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C88ECC48A47A41BC91F9ABB9 /* libPods-PlatformLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */; };
+		E89C041617971CBD00A3655D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C041517971CBD00A3655D /* Foundation.framework */; };
+		E89C041B17971CBD00A3655D /* PlatformLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E89C041A17971CBD00A3655D /* PlatformLib.h */; };
+		E89C041D17971CBD00A3655D /* PlatformLib.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C041C17971CBD00A3655D /* PlatformLib.m */; };
+		E89C042517971CBD00A3655D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C042417971CBD00A3655D /* SenTestingKit.framework */; };
+		E89C042717971CBD00A3655D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C042617971CBD00A3655D /* UIKit.framework */; };
+		E89C042817971CBD00A3655D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C041517971CBD00A3655D /* Foundation.framework */; };
+		E89C042B17971CBD00A3655D /* libPlatformLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C041217971CBD00A3655D /* libPlatformLib.a */; };
+		E89C043117971CBD00A3655D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E89C042F17971CBD00A3655D /* InfoPlist.strings */; };
+		E89C043417971CBD00A3655D /* PlatformLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C043317971CBD00A3655D /* PlatformLibTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E89C042917971CBD00A3655D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E89C040A17971CBD00A3655D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E89C041117971CBD00A3655D;
+			remoteInfo = PlatformLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E89C041017971CBD00A3655D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				E89C041B17971CBD00A3655D /* PlatformLib.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		448C62E94DA34744B8901F5B /* Pods-PlatformLibTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformLibTests.xcconfig"; path = "Pods/Pods-PlatformLibTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlatformLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E89C041217971CBD00A3655D /* libPlatformLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPlatformLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E89C041517971CBD00A3655D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E89C041917971CBD00A3655D /* PlatformLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlatformLib-Prefix.pch"; sourceTree = "<group>"; };
+		E89C041A17971CBD00A3655D /* PlatformLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformLib.h; sourceTree = "<group>"; };
+		E89C041C17971CBD00A3655D /* PlatformLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformLib.m; sourceTree = "<group>"; };
+		E89C042317971CBD00A3655D /* PlatformLibTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlatformLibTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E89C042417971CBD00A3655D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E89C042617971CBD00A3655D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E89C042E17971CBD00A3655D /* PlatformLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlatformLibTests-Info.plist"; sourceTree = "<group>"; };
+		E89C043017971CBD00A3655D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E89C043317971CBD00A3655D /* PlatformLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformLibTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E89C040F17971CBD00A3655D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E89C041617971CBD00A3655D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E89C041F17971CBD00A3655D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E89C042517971CBD00A3655D /* SenTestingKit.framework in Frameworks */,
+				E89C042717971CBD00A3655D /* UIKit.framework in Frameworks */,
+				E89C042817971CBD00A3655D /* Foundation.framework in Frameworks */,
+				E89C042B17971CBD00A3655D /* libPlatformLib.a in Frameworks */,
+				C88ECC48A47A41BC91F9ABB9 /* libPods-PlatformLibTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E89C040917971CBD00A3655D = {
+			isa = PBXGroup;
+			children = (
+				E89C041717971CBD00A3655D /* PlatformLib */,
+				E89C042C17971CBD00A3655D /* PlatformLibTests */,
+				E89C041417971CBD00A3655D /* Frameworks */,
+				E89C041317971CBD00A3655D /* Products */,
+				448C62E94DA34744B8901F5B /* Pods-PlatformLibTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		E89C041317971CBD00A3655D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E89C041217971CBD00A3655D /* libPlatformLib.a */,
+				E89C042317971CBD00A3655D /* PlatformLibTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E89C041417971CBD00A3655D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E89C041517971CBD00A3655D /* Foundation.framework */,
+				E89C042417971CBD00A3655D /* SenTestingKit.framework */,
+				E89C042617971CBD00A3655D /* UIKit.framework */,
+				6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E89C041717971CBD00A3655D /* PlatformLib */ = {
+			isa = PBXGroup;
+			children = (
+				E89C041A17971CBD00A3655D /* PlatformLib.h */,
+				E89C041C17971CBD00A3655D /* PlatformLib.m */,
+				E89C041817971CBD00A3655D /* Supporting Files */,
+			);
+			path = PlatformLib;
+			sourceTree = "<group>";
+		};
+		E89C041817971CBD00A3655D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E89C041917971CBD00A3655D /* PlatformLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E89C042C17971CBD00A3655D /* PlatformLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				E89C043317971CBD00A3655D /* PlatformLibTests.m */,
+				E89C042D17971CBD00A3655D /* Supporting Files */,
+			);
+			path = PlatformLibTests;
+			sourceTree = "<group>";
+		};
+		E89C042D17971CBD00A3655D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E89C042E17971CBD00A3655D /* PlatformLibTests-Info.plist */,
+				E89C042F17971CBD00A3655D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E89C041117971CBD00A3655D /* PlatformLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E89C043717971CBD00A3655D /* Build configuration list for PBXNativeTarget "PlatformLib" */;
+			buildPhases = (
+				E89C040E17971CBD00A3655D /* Sources */,
+				E89C040F17971CBD00A3655D /* Frameworks */,
+				E89C041017971CBD00A3655D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlatformLib;
+			productName = PlatformLib;
+			productReference = E89C041217971CBD00A3655D /* libPlatformLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E89C042217971CBD00A3655D /* PlatformLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E89C043A17971CBD00A3655D /* Build configuration list for PBXNativeTarget "PlatformLibTests" */;
+			buildPhases = (
+				868B41EF950F4A13B837A68B /* Check Pods Manifest.lock */,
+				E89C041E17971CBD00A3655D /* Sources */,
+				E89C041F17971CBD00A3655D /* Frameworks */,
+				E89C042017971CBD00A3655D /* Resources */,
+				E89C042117971CBD00A3655D /* ShellScript */,
+				6FFE3A5028A34FFC956E4619 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E89C042A17971CBD00A3655D /* PBXTargetDependency */,
+			);
+			name = PlatformLibTests;
+			productName = PlatformLibTests;
+			productReference = E89C042317971CBD00A3655D /* PlatformLibTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E89C040A17971CBD00A3655D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "David Muto";
+			};
+			buildConfigurationList = E89C040D17971CBD00A3655D /* Build configuration list for PBXProject "PlatformLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E89C040917971CBD00A3655D;
+			productRefGroup = E89C041317971CBD00A3655D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E89C041117971CBD00A3655D /* PlatformLib */,
+				E89C042217971CBD00A3655D /* PlatformLibTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E89C042017971CBD00A3655D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E89C043117971CBD00A3655D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FFE3A5028A34FFC956E4619 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-PlatformLibTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		868B41EF950F4A13B837A68B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E89C042117971CBD00A3655D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E89C040E17971CBD00A3655D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E89C041D17971CBD00A3655D /* PlatformLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E89C041E17971CBD00A3655D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E89C043417971CBD00A3655D /* PlatformLibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E89C042A17971CBD00A3655D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E89C041117971CBD00A3655D /* PlatformLib */;
+			targetProxy = E89C042917971CBD00A3655D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E89C042F17971CBD00A3655D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E89C043017971CBD00A3655D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E89C043517971CBD00A3655D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E89C043617971CBD00A3655D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E89C043817971CBD00A3655D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/PlatformLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlatformLib/PlatformLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E89C043917971CBD00A3655D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/PlatformLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlatformLib/PlatformLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E89C043B17971CBD00A3655D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 448C62E94DA34744B8901F5B /* Pods-PlatformLibTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlatformLib/PlatformLib-Prefix.pch";
+				INFOPLIST_FILE = "PlatformLibTests/PlatformLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E89C043C17971CBD00A3655D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 448C62E94DA34744B8901F5B /* Pods-PlatformLibTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlatformLib/PlatformLib-Prefix.pch";
+				INFOPLIST_FILE = "PlatformLibTests/PlatformLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E89C040D17971CBD00A3655D /* Build configuration list for PBXProject "PlatformLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E89C043517971CBD00A3655D /* Debug */,
+				E89C043617971CBD00A3655D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E89C043717971CBD00A3655D /* Build configuration list for PBXNativeTarget "PlatformLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E89C043817971CBD00A3655D /* Debug */,
+				E89C043917971CBD00A3655D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E89C043A17971CBD00A3655D /* Build configuration list for PBXNativeTarget "PlatformLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E89C043B17971CBD00A3655D /* Debug */,
+				E89C043C17971CBD00A3655D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E89C040A17971CBD00A3655D /* Project object */;
+}
