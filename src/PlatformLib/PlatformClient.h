@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^PlatformClientResultBlock)(NSArray *items);
-typedef void (^PlatformClientErrorBlock)(void);
+typedef void (^PlatformClientResponseBlock)(NSURLRequest *, NSURLResponse *, id);
+typedef void (^PlatformClientResponseErrorBlock)(NSURLRequest *, NSURLResponse *, NSError *, id);
+
+typedef void (^PlatformClientResultBlock)(NSArray *);
+typedef void (^PlatformClientErrorBlock)(NSError *);
 
 @protocol PlatformClientDataSource <NSObject>
 
-- (NSArray *)responseWithEntriesForURL:(NSURL *)url;
+- (NSArray *)responseWithEntriesForURL:(NSURL *)url
+                               success:(PlatformClientResponseBlock)successBlock
+                               failure:(PlatformClientResponseErrorBlock)errorBlock;
 
 @end
 
@@ -25,7 +30,7 @@ typedef void (^PlatformClientErrorBlock)(void);
 
 - (id)initWithAccount:(NSString *)accountPID andFeed:(NSString *)feedPID;
 
-- (void)getCategoriesOnCompletion:(PlatformClientResultBlock)complete
-                          onError:(PlatformClientErrorBlock)error;
+- (void)getCategoriesWithBlock:(PlatformClientResultBlock)success
+                       failure:(PlatformClientErrorBlock)failure;
 
 @end

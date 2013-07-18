@@ -45,18 +45,67 @@ describe(@"PlatformClient", ^{
     
     describe(@"- getCategoriesOnCompletion", ^{
         
-        context(@"when call fails", ^{
+        context(@"when call succeeds", ^{
+            id mock = [KWMock mockForProtocol:@protocol(PlatformClientDataSource)];
             PlatformClient *client = [[PlatformClient alloc] initWithAccount:@"account" andFeed:@"feed"];
             
             beforeEach(^{
-                // stub method
-                id mock = [KWMock mockForProtocol:@protocol(PlatformClientDataSource)];
-                [mock stub:@selector(responseWithEntriesForURL:) withBlock:^id(NSArray *params) {
-                    [NSException raise:@"Bad URL" format:@"Get outta here!!"];
+                [mock stub:@selector(responseWithEntriesForURL:success:failure:) withBlock:^id(NSArray *params) {
+                    // simulate success by calling success block
+                    PlatformClientResponseBlock success = [params objectAtIndex:1];
+                    success(nil, nil, nil);
                     return nil;
                 }];
                 
                 client.dataSource = mock;
+            });
+            
+            it(@"delegates call dataSource", ^{
+                [[mock shouldEventually] receive:@selector(responseWithEntriesForURL:success:failure:)];
+                [client getCategoriesWithBlock:nil failure:nil];
+            });
+            
+            it(@"executes the success block", ^{
+                __block BOOL called = NO;
+                
+                PlatformClientResultBlock successBlock = ^(NSArray *err) {
+                    called = YES;
+                };
+                
+                [client getCategoriesWithBlock:successBlock failure:nil];
+                [[expectFutureValue(theValue(called)) shouldEventuallyBeforeTimingOutAfter(1.f)] beYes];
+            });
+        });
+        
+        context(@"when call fails", ^{
+            id mock = [KWMock mockForProtocol:@protocol(PlatformClientDataSource)];
+            PlatformClient *client = [[PlatformClient alloc] initWithAccount:@"account" andFeed:@"feed"];
+            
+            beforeEach(^{
+                [mock stub:@selector(responseWithEntriesForURL:success:failure:) withBlock:^id(NSArray *params) {
+                    // simulate failure by calling error block
+                    PlatformClientResponseErrorBlock err = [params objectAtIndex:2];
+                    err(nil, nil, nil, nil);
+                    return nil;
+                }];
+                
+                client.dataSource = mock;
+            });
+            
+            it(@"delegates call dataSource", ^{
+                [[mock shouldEventually] receive:@selector(responseWithEntriesForURL:success:failure:)];
+                [client getCategoriesWithBlock:nil failure:nil];
+            });
+            
+            it(@"executes the error block", ^{
+                __block BOOL called = NO;
+                
+                PlatformClientErrorBlock errorBlock = ^(NSError *err) {
+                    called = YES;
+                };
+                
+                [client getCategoriesWithBlock:nil failure:errorBlock];
+                [[expectFutureValue(theValue(called)) shouldEventuallyBeforeTimingOutAfter(1.f)] beYes];
             });
         });
     });
