@@ -7,7 +7,4 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface PlatformLib : NSObject
-
-@end
+#import "PlatformClient.h"

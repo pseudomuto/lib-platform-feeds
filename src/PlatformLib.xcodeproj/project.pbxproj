@@ -10,13 +10,13 @@
 		C88ECC48A47A41BC91F9ABB9 /* libPods-PlatformLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */; };
 		E89C041617971CBD00A3655D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C041517971CBD00A3655D /* Foundation.framework */; };
 		E89C041B17971CBD00A3655D /* PlatformLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E89C041A17971CBD00A3655D /* PlatformLib.h */; };
-		E89C041D17971CBD00A3655D /* PlatformLib.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C041C17971CBD00A3655D /* PlatformLib.m */; };
 		E89C042517971CBD00A3655D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C042417971CBD00A3655D /* SenTestingKit.framework */; };
 		E89C042717971CBD00A3655D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C042617971CBD00A3655D /* UIKit.framework */; };
 		E89C042817971CBD00A3655D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C041517971CBD00A3655D /* Foundation.framework */; };
 		E89C042B17971CBD00A3655D /* libPlatformLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C041217971CBD00A3655D /* libPlatformLib.a */; };
 		E89C043117971CBD00A3655D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E89C042F17971CBD00A3655D /* InfoPlist.strings */; };
-		E89C043417971CBD00A3655D /* PlatformLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C043317971CBD00A3655D /* PlatformLibTests.m */; };
+		E8E681C717976CF5006AB3BC /* PlatformClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E681C617976CF5006AB3BC /* PlatformClient.m */; };
+		E8E681C9179775C6006AB3BC /* PlatformClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E681C8179775C6006AB3BC /* PlatformClientSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +49,14 @@
 		E89C041517971CBD00A3655D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E89C041917971CBD00A3655D /* PlatformLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlatformLib-Prefix.pch"; sourceTree = "<group>"; };
 		E89C041A17971CBD00A3655D /* PlatformLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformLib.h; sourceTree = "<group>"; };
-		E89C041C17971CBD00A3655D /* PlatformLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformLib.m; sourceTree = "<group>"; };
 		E89C042317971CBD00A3655D /* PlatformLibTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlatformLibTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89C042417971CBD00A3655D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E89C042617971CBD00A3655D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E89C042E17971CBD00A3655D /* PlatformLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlatformLibTests-Info.plist"; sourceTree = "<group>"; };
 		E89C043017971CBD00A3655D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E89C043317971CBD00A3655D /* PlatformLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformLibTests.m; sourceTree = "<group>"; };
+		E8E681C517976CF5006AB3BC /* PlatformClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformClient.h; sourceTree = "<group>"; };
+		E8E681C617976CF5006AB3BC /* PlatformClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformClient.m; sourceTree = "<group>"; };
+		E8E681C8179775C6006AB3BC /* PlatformClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformClientSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +117,8 @@
 		E89C041717971CBD00A3655D /* PlatformLib */ = {
 			isa = PBXGroup;
 			children = (
+				E8E681C417976CCA006AB3BC /* Classes */,
 				E89C041A17971CBD00A3655D /* PlatformLib.h */,
-				E89C041C17971CBD00A3655D /* PlatformLib.m */,
 				E89C041817971CBD00A3655D /* Supporting Files */,
 			);
 			path = PlatformLib;
@@ -134,8 +135,8 @@
 		E89C042C17971CBD00A3655D /* PlatformLibTests */ = {
 			isa = PBXGroup;
 			children = (
-				E89C043317971CBD00A3655D /* PlatformLibTests.m */,
 				E89C042D17971CBD00A3655D /* Supporting Files */,
+				E8E681C8179775C6006AB3BC /* PlatformClientSpec.m */,
 			);
 			path = PlatformLibTests;
 			sourceTree = "<group>";
@@ -147,6 +148,15 @@
 				E89C042F17971CBD00A3655D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8E681C417976CCA006AB3BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E8E681C517976CF5006AB3BC /* PlatformClient.h */,
+				E8E681C617976CF5006AB3BC /* PlatformClient.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E89C041D17971CBD00A3655D /* PlatformLib.m in Sources */,
+				E8E681C717976CF5006AB3BC /* PlatformClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E89C043417971CBD00A3655D /* PlatformLibTests.m in Sources */,
+				E8E681C9179775C6006AB3BC /* PlatformClientSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
