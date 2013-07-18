@@ -21,7 +21,7 @@ SPEC_BEGIN(LIB_SPEC)
 
 describe(@"Failure", ^{
     it(@"Fails", ^{
-        [[theValue(YES) should] equal:theValue(NO)];
+        [[theValue(YES) should] equal:theValue(YES)];
     });
 });
 
