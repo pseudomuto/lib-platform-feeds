@@ -43,7 +43,7 @@ describe(@"PlatformClient", ^{
         });
     });
     
-    describe(@"- getCategoriesOnCompletion", ^{
+    describe(@"- getCategoriesWithBlock:failure:", ^{
         
         context(@"when call succeeds", ^{
             id mock = [KWMock mockForProtocol:@protocol(PlatformClientDataSource)];

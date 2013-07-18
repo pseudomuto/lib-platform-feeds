@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C88ECC48A47A41BC91F9ABB9 /* libPods-PlatformLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */; };
+		E886D6A117985E960058EC11 /* PlatformCategoryFeedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6A017985E960058EC11 /* PlatformCategoryFeedSpec.m */; };
+		E886D6A417985EE50058EC11 /* PlatformCategoryFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6A317985EE50058EC11 /* PlatformCategoryFeed.m */; };
 		E89C041617971CBD00A3655D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C041517971CBD00A3655D /* Foundation.framework */; };
 		E89C041B17971CBD00A3655D /* PlatformLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E89C041A17971CBD00A3655D /* PlatformLib.h */; };
 		E89C042517971CBD00A3655D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C042417971CBD00A3655D /* SenTestingKit.framework */; };
@@ -45,6 +47,9 @@
 /* Begin PBXFileReference section */
 		448C62E94DA34744B8901F5B /* Pods-PlatformLibTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformLibTests.xcconfig"; path = "Pods/Pods-PlatformLibTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlatformLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E886D6A017985E960058EC11 /* PlatformCategoryFeedSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategoryFeedSpec.m; sourceTree = "<group>"; };
+		E886D6A217985EE50058EC11 /* PlatformCategoryFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformCategoryFeed.h; sourceTree = "<group>"; };
+		E886D6A317985EE50058EC11 /* PlatformCategoryFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategoryFeed.m; sourceTree = "<group>"; };
 		E89C041217971CBD00A3655D /* libPlatformLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPlatformLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89C041517971CBD00A3655D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E89C041917971CBD00A3655D /* PlatformLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlatformLib-Prefix.pch"; sourceTree = "<group>"; };
@@ -83,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E886D6A51798622C0058EC11 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				E886D6A217985EE50058EC11 /* PlatformCategoryFeed.h */,
+				E886D6A317985EE50058EC11 /* PlatformCategoryFeed.m */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
 		E89C040917971CBD00A3655D = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +151,7 @@
 			children = (
 				E89C042D17971CBD00A3655D /* Supporting Files */,
 				E8E681C8179775C6006AB3BC /* PlatformClientSpec.m */,
+				E886D6A017985E960058EC11 /* PlatformCategoryFeedSpec.m */,
 			);
 			path = PlatformLibTests;
 			sourceTree = "<group>";
@@ -153,6 +168,7 @@
 		E8E681C417976CCA006AB3BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E886D6A51798622C0058EC11 /* Parsers */,
 				E8E681C517976CF5006AB3BC /* PlatformClient.h */,
 				E8E681C617976CF5006AB3BC /* PlatformClient.m */,
 			);
@@ -290,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E681C717976CF5006AB3BC /* PlatformClient.m in Sources */,
+				E886D6A417985EE50058EC11 /* PlatformCategoryFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E681C9179775C6006AB3BC /* PlatformClientSpec.m in Sources */,
+				E886D6A117985E960058EC11 /* PlatformCategoryFeedSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
