@@ -19,4 +19,10 @@ SPEC_BEGIN(LIB_SPEC)
 //    });
 //});
 
+describe(@"Failure", ^{
+    it(@"Fails", ^{
+        [[theValue(YES) should] equal:theValue(YES)];
+    });
+});
+
 SPEC_END
