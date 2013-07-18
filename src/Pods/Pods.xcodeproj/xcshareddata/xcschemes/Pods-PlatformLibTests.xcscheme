@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E89C041117971CBD00A3655D"
-               BuildableName = "libPlatformLib.a"
-               BlueprintName = "PlatformLib"
-               ReferencedContainer = "container:PlatformLib.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E89C042217971CBD00A3655D"
-               BuildableName = "PlatformLibTests.octest"
-               BlueprintName = "PlatformLibTests"
-               ReferencedContainer = "container:PlatformLib.xcodeproj">
+               BlueprintIdentifier = "4E15A0A7BCF64CAE9301B144"
+               BuildableName = "libPods-PlatformLibTests.a"
+               BlueprintName = "Pods-PlatformLibTests"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E89C042217971CBD00A3655D"
-               BuildableName = "PlatformLibTests.octest"
-               BlueprintName = "PlatformLibTests"
-               ReferencedContainer = "container:PlatformLib.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
