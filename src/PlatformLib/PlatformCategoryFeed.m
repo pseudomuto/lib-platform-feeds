@@ -8,46 +8,6 @@
 
 #import "PlatformCategoryFeed.h"
 
-@interface PlatformCategoryFeed ()
-@property (nonatomic, copy) id jsonFeed;
-@end
-
 @implementation PlatformCategoryFeed
-
-- (id)initWithJSON:(id)jsonFeed
-{
-    if((self = [super init])) {
-        self.jsonFeed = jsonFeed;
-    }
-    
-    return self;
-}
-
-# pragma mark - Public Properties
-
-- (NSNumber *)startIndex
-{
-    return [NSNumber numberWithInteger:[[self.jsonFeed objectForKey:@"startIndex"] integerValue]];
-}
-
-- (NSNumber *)itemsPerPage
-{
-    return [NSNumber numberWithInteger:[[self.jsonFeed objectForKey:@"itemsPerPage"] integerValue]];
-}
-
-- (NSNumber *)entryCount
-{
-    return [NSNumber numberWithInteger:[[self.jsonFeed objectForKey:@"entryCount"] integerValue]];
-}
-
-- (NSString *)title
-{
-    return [self.jsonFeed objectForKey:@"title"];
-}
-
-- (NSString *)author
-{
-    return [self.jsonFeed objectForKey:@"author"];
-}
 
 @end

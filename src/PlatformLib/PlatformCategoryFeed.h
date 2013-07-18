@@ -7,15 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PlatformFeed.h"
 
-@interface PlatformCategoryFeed : NSObject
-
-@property (nonatomic, readonly) NSNumber *startIndex;
-@property (nonatomic, readonly) NSNumber *itemsPerPage;
-@property (nonatomic, readonly) NSNumber *entryCount;
-@property (nonatomic, readonly) NSString *title;
-@property (nonatomic, readonly) NSString *author;
-
-- (id)initWithJSON:(id)jsonFeed;
+@interface PlatformCategoryFeed : PlatformFeed
 
 @end
