@@ -34,6 +34,7 @@
 - (void)processJsonObject:(id)jsonObject
 {
     __weak __typeof__(self) _self = self;
+    
     [jsonObject enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSRange index = [key rangeOfString:@"$"];
         
@@ -52,9 +53,7 @@
                           [[name substringToIndex:1] uppercaseString],
                           [name substringFromIndex:1]];
     
-    NSString *selName = [NSString stringWithFormat:@"set%@:", propName];
-    NSLog(@"Attempting to call %@", selName);
-    
+    NSString *selName = [NSString stringWithFormat:@"set%@:", propName];    
     SEL selector = NSSelectorFromString(selName);
     
     if([self respondsToSelector:selector]) {

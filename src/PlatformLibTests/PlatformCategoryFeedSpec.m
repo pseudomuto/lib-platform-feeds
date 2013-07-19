@@ -95,39 +95,4 @@ describe(@"- entries", ^{
     });
 });
 
-describe(@"- parseEntry:entryObject", ^{
-    PlatformCategory *_category = [_subject.entries objectAtIndex:0];
-    
-    //{\"id\":\"http://data.media.theplatform.com/media/data/Category/37717571913\",\"title\":\"I'm Having Their Baby\",\"description\":\"\",\"fullTitle\":\"I'm Having Their Baby\",\"order\":2147483647,\"pl1$showStatus\":\"available\"}
-    it(@"parses category id", ^{
-        [[_category.category_id shouldNot] beNil];
-        [[_category.category_id should] equal:@"http://data.media.theplatform.com/media/data/Category/37717571913"];
-    });
-    
-    it(@"parses category title", ^{
-        [[_category.title shouldNot] beNil];
-        [[_category.title should] equal:@"I'm Having Their Baby"];
-    });
-    
-    it(@"parses category description", ^{
-        [[_category.description shouldNot] beNil];
-        [[_category.description should] equal:@""];
-    });
-    
-    it(@"parses category fullTitle", ^{
-        [[_category.fullTitle shouldNot] beNil];
-        [[_category.fullTitle should] equal:@"I'm Having Their Baby"];
-    });
-    
-    it(@"parses category order", ^{
-        [[_category.order shouldNot] beNil];
-        [[_category.order should] equal:theValue(2147483647)];
-    });
-    
-    it(@"parses custom property", ^{
-        [[[_category.properties objectForKey:@"showStatus"] shouldNot] beNil];
-        [[[_category.properties objectForKey:@"showStatus"] should] equal:@"available"];
-    });
-});
-
 SPEC_END

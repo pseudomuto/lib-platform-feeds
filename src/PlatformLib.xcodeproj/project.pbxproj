@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C88ECC48A47A41BC91F9ABB9 /* libPods-PlatformLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */; };
+		E88407751799D2B8009902A7 /* PlatformCategorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E88407741799D2B8009902A7 /* PlatformCategorySpec.m */; };
 		E886D6A117985E960058EC11 /* PlatformCategoryFeedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6A017985E960058EC11 /* PlatformCategoryFeedSpec.m */; };
 		E886D6A417985EE50058EC11 /* PlatformCategoryFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6A317985EE50058EC11 /* PlatformCategoryFeed.m */; };
 		E886D6AD179898540058EC11 /* PlatformFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6AC179898540058EC11 /* PlatformFeed.m */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		448C62E94DA34744B8901F5B /* Pods-PlatformLibTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformLibTests.xcconfig"; path = "Pods/Pods-PlatformLibTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlatformLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E88407741799D2B8009902A7 /* PlatformCategorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategorySpec.m; sourceTree = "<group>"; };
 		E886D6A017985E960058EC11 /* PlatformCategoryFeedSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategoryFeedSpec.m; sourceTree = "<group>"; };
 		E886D6A217985EE50058EC11 /* PlatformCategoryFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformCategoryFeed.h; sourceTree = "<group>"; };
 		E886D6A317985EE50058EC11 /* PlatformCategoryFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategoryFeed.m; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E88407731799D29B009902A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E88407741799D2B8009902A7 /* PlatformCategorySpec.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		E886D6A51798622C0058EC11 /* Feeds */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		E89C042C17971CBD00A3655D /* PlatformLibTests */ = {
 			isa = PBXGroup;
 			children = (
+				E88407731799D29B009902A7 /* Models */,
 				E886D6A91798925E0058EC11 /* Feeds */,
 				E89C042D17971CBD00A3655D /* Supporting Files */,
 				E8E681C8179775C6006AB3BC /* PlatformClientSpec.m */,
@@ -350,6 +361,7 @@
 			files = (
 				E8E681C9179775C6006AB3BC /* PlatformClientSpec.m in Sources */,
 				E886D6A117985E960058EC11 /* PlatformCategoryFeedSpec.m in Sources */,
+				E88407751799D2B8009902A7 /* PlatformCategorySpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
