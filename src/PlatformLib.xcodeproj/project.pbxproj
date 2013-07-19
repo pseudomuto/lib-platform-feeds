@@ -11,6 +11,8 @@
 		E886D6A117985E960058EC11 /* PlatformCategoryFeedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6A017985E960058EC11 /* PlatformCategoryFeedSpec.m */; };
 		E886D6A417985EE50058EC11 /* PlatformCategoryFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6A317985EE50058EC11 /* PlatformCategoryFeed.m */; };
 		E886D6AD179898540058EC11 /* PlatformFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6AC179898540058EC11 /* PlatformFeed.m */; };
+		E886D6B11799852B0058EC11 /* PlatformCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6B01799852B0058EC11 /* PlatformCategory.m */; };
+		E886D6B417998D470058EC11 /* PlatformObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6B317998D470058EC11 /* PlatformObject.m */; };
 		E89C041617971CBD00A3655D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C041517971CBD00A3655D /* Foundation.framework */; };
 		E89C041B17971CBD00A3655D /* PlatformLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E89C041A17971CBD00A3655D /* PlatformLib.h */; };
 		E89C042517971CBD00A3655D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89C042417971CBD00A3655D /* SenTestingKit.framework */; };
@@ -53,6 +55,10 @@
 		E886D6A317985EE50058EC11 /* PlatformCategoryFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategoryFeed.m; sourceTree = "<group>"; };
 		E886D6AB179898540058EC11 /* PlatformFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformFeed.h; sourceTree = "<group>"; };
 		E886D6AC179898540058EC11 /* PlatformFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformFeed.m; sourceTree = "<group>"; };
+		E886D6AF1799852B0058EC11 /* PlatformCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformCategory.h; sourceTree = "<group>"; };
+		E886D6B01799852B0058EC11 /* PlatformCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategory.m; sourceTree = "<group>"; };
+		E886D6B217998D470058EC11 /* PlatformObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformObject.h; sourceTree = "<group>"; };
+		E886D6B317998D470058EC11 /* PlatformObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformObject.m; sourceTree = "<group>"; };
 		E89C041217971CBD00A3655D /* libPlatformLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPlatformLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89C041517971CBD00A3655D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E89C041917971CBD00A3655D /* PlatformLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlatformLib-Prefix.pch"; sourceTree = "<group>"; };
@@ -108,6 +114,17 @@
 				E886D6A017985E960058EC11 /* PlatformCategoryFeedSpec.m */,
 			);
 			name = Feeds;
+			sourceTree = "<group>";
+		};
+		E886D6AE179985160058EC11 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E886D6AF1799852B0058EC11 /* PlatformCategory.h */,
+				E886D6B01799852B0058EC11 /* PlatformCategory.m */,
+				E886D6B217998D470058EC11 /* PlatformObject.h */,
+				E886D6B317998D470058EC11 /* PlatformObject.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		E89C040917971CBD00A3655D = {
@@ -181,6 +198,7 @@
 		E8E681C417976CCA006AB3BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E886D6AE179985160058EC11 /* Models */,
 				E886D6A51798622C0058EC11 /* Feeds */,
 				E8E681C517976CF5006AB3BC /* PlatformClient.h */,
 				E8E681C617976CF5006AB3BC /* PlatformClient.m */,
@@ -321,6 +339,8 @@
 				E8E681C717976CF5006AB3BC /* PlatformClient.m in Sources */,
 				E886D6A417985EE50058EC11 /* PlatformCategoryFeed.m in Sources */,
 				E886D6AD179898540058EC11 /* PlatformFeed.m in Sources */,
+				E886D6B11799852B0058EC11 /* PlatformCategory.m in Sources */,
+				E886D6B417998D470058EC11 /* PlatformObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,42 +13,41 @@
 - (id)initWithJSON:(id)jsonFeed
 {
     if((self = [super init])) {
-        _jsonFeed = jsonFeed;
+        if (!jsonFeed) {
+            [NSException raise:@"Bad feed data" format:@"jsonFeed cannot be nil"];
+        }
+        [self parseFeed:jsonFeed];
     }
     
     return self;
 }
 
-# pragma mark - Public Properties
+# pragma mark - "Protected" methods
 
-- (NSDictionary *)namespaces
+- (void)parseFeed:(id)jsonFeed
 {
-    return [_jsonFeed objectForKey:@"$xmlns"];
+    [jsonFeed enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if([key isEqualToString:@"entries"]) {
+            NSMutableArray *items = [NSMutableArray array];
+            for (id item in obj) {
+                [items addObject:[self parseEntry:item]];
+            }
+            
+            _entries = items;
+        } else if ([key isEqualToString:@"$xmlns"]) {
+            _namespaces = obj;
+        } else {
+            SuppressPerformSelectorLeakWarning(
+                SEL whichOne = NSSelectorFromString(key);
+                [self performSelector:whichOne withObject:obj];
+            );
+        }
+    }];
 }
 
-- (NSNumber *)startIndex
+- (id)parseEntry:(id)entryObject
 {
-    return [NSNumber numberWithInteger:[[_jsonFeed objectForKey:@"startIndex"] integerValue]];
-}
-
-- (NSNumber *)itemsPerPage
-{
-    return [NSNumber numberWithInteger:[[_jsonFeed objectForKey:@"itemsPerPage"] integerValue]];
-}
-
-- (NSNumber *)entryCount
-{
-    return [NSNumber numberWithInteger:[[_jsonFeed objectForKey:@"entryCount"] integerValue]];
-}
-
-- (NSString *)title
-{
-    return [_jsonFeed objectForKey:@"title"];
-}
-
-- (NSString *)author
-{
-    return [_jsonFeed objectForKey:@"author"];
+    @throw @"Not Implemented";
 }
 
 @end

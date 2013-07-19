@@ -8,19 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PlatformFeed : NSObject {
+@interface PlatformFeed : NSObject 
 
-@protected
-    id _jsonFeed;
-}
-
-@property (nonatomic, readonly) NSDictionary *namespaces;
-@property (nonatomic, readonly) NSNumber *startIndex;
-@property (nonatomic, readonly) NSNumber *itemsPerPage;
-@property (nonatomic, readonly) NSNumber *entryCount;
-@property (nonatomic, readonly) NSString *title;
-@property (nonatomic, readonly) NSString *author;
+@property (nonatomic, strong) NSDictionary *namespaces;
+@property (nonatomic, strong) NSNumber *startIndex;
+@property (nonatomic, strong) NSNumber *itemsPerPage;
+@property (nonatomic, strong) NSNumber *entryCount;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *author;
+@property (nonatomic, strong) NSArray *entries;
 
 - (id)initWithJSON:(id)jsonFeed;
+
+// @protected methods
+
+- (void)parseFeed:(id)jsonFeed;
+- (id)parseEntry:(id)entryObject;
 
 @end
