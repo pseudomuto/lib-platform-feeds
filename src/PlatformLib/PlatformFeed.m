@@ -26,11 +26,13 @@
 
 - (void)parseFeed:(id)jsonFeed
 {
+    __weak __typeof__(self) _self = self;
+    
     [jsonFeed enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         if([key isEqualToString:@"entries"]) {
             NSMutableArray *items = [NSMutableArray array];
             for (id item in obj) {
-                [items addObject:[self parseEntry:item]];
+                [items addObject:[_self parseEntry:item]];
             }
             
             _entries = items;
@@ -39,7 +41,7 @@
         } else {
             SuppressPerformSelectorLeakWarning(
                 SEL whichOne = NSSelectorFromString(key);
-                [self performSelector:whichOne withObject:obj];
+                [_self performSelector:whichOne withObject:obj];
             );
         }
     }];

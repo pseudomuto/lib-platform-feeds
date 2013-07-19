@@ -13,15 +13,7 @@
 
 - (id)parseEntry:(id)entryObject
 {
-    PlatformCategory *obj = [[PlatformCategory alloc] init];
-    
-    obj.id = [entryObject objectForKey:@"id"];
-    obj.title = [entryObject objectForKey:@"title"];
-    obj.description = [entryObject objectForKey:@"description"];
-    obj.fullTitle = [entryObject objectForKey:@"fullTitle"];
-    obj.order = [NSNumber numberWithLong:[[entryObject objectForKey:@"order"] longValue]];
-    
-    return obj;
+    return [[PlatformCategory alloc] initWithJSON:entryObject];
 }
 
 @end

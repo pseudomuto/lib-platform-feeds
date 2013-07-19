@@ -11,7 +11,7 @@
 
 @interface PlatformCategory : PlatformObject
 
-@property (nonatomic, strong) NSString *id;
+@property (nonatomic, strong) NSString *category_id;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSString *fullTitle;

@@ -10,4 +10,11 @@
 
 @interface PlatformObject : NSObject
 
+@property (nonatomic, strong) NSMutableDictionary *properties;
+
+- (id)initWithJSON:(id)jsonObject;
+
+- (void)processJsonObject:(id)jsonObject;
+- (void)processPropertyName:(NSString *)name andValue:(id)value;
+- (void)processCustomProperty:(NSString *)name withValue:(id)value;
 @end

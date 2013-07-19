@@ -100,8 +100,8 @@ describe(@"- parseEntry:entryObject", ^{
     
     //{\"id\":\"http://data.media.theplatform.com/media/data/Category/37717571913\",\"title\":\"I'm Having Their Baby\",\"description\":\"\",\"fullTitle\":\"I'm Having Their Baby\",\"order\":2147483647,\"pl1$showStatus\":\"available\"}
     it(@"parses category id", ^{
-        [[_category.id shouldNot] beNil];
-        [[_category.id should] equal:@"http://data.media.theplatform.com/media/data/Category/37717571913"];
+        [[_category.category_id shouldNot] beNil];
+        [[_category.category_id should] equal:@"http://data.media.theplatform.com/media/data/Category/37717571913"];
     });
     
     it(@"parses category title", ^{
@@ -122,6 +122,11 @@ describe(@"- parseEntry:entryObject", ^{
     it(@"parses category order", ^{
         [[_category.order shouldNot] beNil];
         [[_category.order should] equal:theValue(2147483647)];
+    });
+    
+    it(@"parses custom property", ^{
+        [[[_category.properties objectForKey:@"showStatus"] shouldNot] beNil];
+        [[[_category.properties objectForKey:@"showStatus"] should] equal:@"available"];
     });
 });
 

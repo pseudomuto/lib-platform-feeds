@@ -10,4 +10,23 @@
 
 @implementation PlatformCategory
 
+- (id)initWithJSON:(id)jsonObject
+{
+    if((self = [super initWithJSON:jsonObject])) {
+        [self processJsonObject:jsonObject];
+    }
+    
+    return self;
+}
+
+- (void)processPropertyName:(NSString *)name andValue:(id)value
+{
+    if ([name isEqualToString:@"id"]) {
+        self.category_id = value;
+        return;
+    }
+    
+    [super processPropertyName:name andValue:value];
+}
+
 @end
