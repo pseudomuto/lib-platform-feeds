@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C88ECC48A47A41BC91F9ABB9 /* libPods-PlatformLibTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */; };
 		E88407751799D2B8009902A7 /* PlatformCategorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E88407741799D2B8009902A7 /* PlatformCategorySpec.m */; };
+		E88407791799D4FF009902A7 /* PlatformCategoryRequestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E88407781799D4FF009902A7 /* PlatformCategoryRequestSpec.m */; };
+		E884077C1799D578009902A7 /* PlatformCategoryRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E884077B1799D578009902A7 /* PlatformCategoryRequest.m */; };
+		E884077F1799D7C5009902A7 /* PlatformRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E884077E1799D7C5009902A7 /* PlatformRequest.m */; };
 		E886D6A117985E960058EC11 /* PlatformCategoryFeedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6A017985E960058EC11 /* PlatformCategoryFeedSpec.m */; };
 		E886D6A417985EE50058EC11 /* PlatformCategoryFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6A317985EE50058EC11 /* PlatformCategoryFeed.m */; };
 		E886D6AD179898540058EC11 /* PlatformFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = E886D6AC179898540058EC11 /* PlatformFeed.m */; };
@@ -52,6 +55,11 @@
 		448C62E94DA34744B8901F5B /* Pods-PlatformLibTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatformLibTests.xcconfig"; path = "Pods/Pods-PlatformLibTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		6FDA4D66503842DC9AF19C44 /* libPods-PlatformLibTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlatformLibTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88407741799D2B8009902A7 /* PlatformCategorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategorySpec.m; sourceTree = "<group>"; };
+		E88407781799D4FF009902A7 /* PlatformCategoryRequestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategoryRequestSpec.m; sourceTree = "<group>"; };
+		E884077A1799D578009902A7 /* PlatformCategoryRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformCategoryRequest.h; sourceTree = "<group>"; };
+		E884077B1799D578009902A7 /* PlatformCategoryRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategoryRequest.m; sourceTree = "<group>"; };
+		E884077D1799D7C5009902A7 /* PlatformRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformRequest.h; sourceTree = "<group>"; };
+		E884077E1799D7C5009902A7 /* PlatformRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformRequest.m; sourceTree = "<group>"; };
 		E886D6A017985E960058EC11 /* PlatformCategoryFeedSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategoryFeedSpec.m; sourceTree = "<group>"; };
 		E886D6A217985EE50058EC11 /* PlatformCategoryFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformCategoryFeed.h; sourceTree = "<group>"; };
 		E886D6A317985EE50058EC11 /* PlatformCategoryFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformCategoryFeed.m; sourceTree = "<group>"; };
@@ -105,6 +113,25 @@
 				E88407741799D2B8009902A7 /* PlatformCategorySpec.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E88407761799D4A3009902A7 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				E884077A1799D578009902A7 /* PlatformCategoryRequest.h */,
+				E884077B1799D578009902A7 /* PlatformCategoryRequest.m */,
+				E884077D1799D7C5009902A7 /* PlatformRequest.h */,
+				E884077E1799D7C5009902A7 /* PlatformRequest.m */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		E88407771799D4E9009902A7 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				E88407781799D4FF009902A7 /* PlatformCategoryRequestSpec.m */,
+			);
+			name = Requests;
 			sourceTree = "<group>";
 		};
 		E886D6A51798622C0058EC11 /* Feeds */ = {
@@ -189,6 +216,7 @@
 		E89C042C17971CBD00A3655D /* PlatformLibTests */ = {
 			isa = PBXGroup;
 			children = (
+				E88407771799D4E9009902A7 /* Requests */,
 				E88407731799D29B009902A7 /* Models */,
 				E886D6A91798925E0058EC11 /* Feeds */,
 				E89C042D17971CBD00A3655D /* Supporting Files */,
@@ -209,6 +237,7 @@
 		E8E681C417976CCA006AB3BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E88407761799D4A3009902A7 /* Requests */,
 				E886D6AE179985160058EC11 /* Models */,
 				E886D6A51798622C0058EC11 /* Feeds */,
 				E8E681C517976CF5006AB3BC /* PlatformClient.h */,
@@ -352,6 +381,8 @@
 				E886D6AD179898540058EC11 /* PlatformFeed.m in Sources */,
 				E886D6B11799852B0058EC11 /* PlatformCategory.m in Sources */,
 				E886D6B417998D470058EC11 /* PlatformObject.m in Sources */,
+				E884077C1799D578009902A7 /* PlatformCategoryRequest.m in Sources */,
+				E884077F1799D7C5009902A7 /* PlatformRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +393,7 @@
 				E8E681C9179775C6006AB3BC /* PlatformClientSpec.m in Sources */,
 				E886D6A117985E960058EC11 /* PlatformCategoryFeedSpec.m in Sources */,
 				E88407751799D2B8009902A7 /* PlatformCategorySpec.m in Sources */,
+				E88407791799D4FF009902A7 /* PlatformCategoryRequestSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
