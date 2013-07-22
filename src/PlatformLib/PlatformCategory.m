@@ -13,6 +13,7 @@
 - (id)initWithJSON:(id)jsonObject
 {
     if((self = [super initWithJSON:jsonObject])) {
+        self.hasReleases = NO;
         [self processJsonObject:jsonObject];
     }
     

@@ -16,5 +16,6 @@
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSString *fullTitle;
 @property (nonatomic, strong) NSNumber *order;
+@property (nonatomic) BOOL hasReleases;
 
 @end
