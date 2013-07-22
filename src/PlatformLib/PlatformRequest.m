@@ -68,6 +68,11 @@ static NSString *const kPlatformHost = @"feed.theplatform.com";
     return [NSURLRequest requestWithURL:url];
 }
 
+- (void)clearParameters
+{
+    [self.parameters removeAllObjects];
+}
+
 - (void)setParameterValue:(id)value forKey:(NSString *)key
 {
     [self.parameters setObject:value forKey:key];

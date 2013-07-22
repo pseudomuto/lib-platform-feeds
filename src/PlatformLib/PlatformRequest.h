@@ -16,6 +16,8 @@
 - (id)initWithAccount:(NSString *)accountPID andFeed:(NSString *)feedPID;
 
 - (NSURLRequest *)makeRequest;
+
+- (void)clearParameters;
 - (void)setParameterValue:(id)value forKey:(NSString *)key;
 
 @end

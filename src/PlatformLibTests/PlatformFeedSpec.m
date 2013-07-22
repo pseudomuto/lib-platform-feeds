@@ -7,7 +7,7 @@
 //
 
 #include "Kiwi.h"
-#include "PlatformFeed.h"
+#include "PlatformCategoryFeed.h"
 
 SPEC_BEGIN(PlatformFeedSpec)
 
@@ -19,11 +19,12 @@ describe(@"PlatformFeed", ^{
         NSData *json = [jsonResponse dataUsingEncoding:NSUTF8StringEncoding];
         id jsonObject = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingAllowFragments error:nil];
         
-        return [[PlatformFeed alloc] initWithJSON:jsonObject];
+        PlatformFeed *feed = [[PlatformCategoryFeed alloc] initWithJSON:jsonObject];
+        return feed;
     }();
     
     describe(@"- initWithJSON:", ^{
-        
+    
         it(@"initializes a new instance", ^{
             [[_subject shouldNot] beNil];
         });

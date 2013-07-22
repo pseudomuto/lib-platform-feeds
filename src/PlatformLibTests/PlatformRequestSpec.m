@@ -39,6 +39,18 @@ describe(@"PlatformRequest", ^{
         });
     });
     
+    describe(@"- clearParameters", ^{
+        
+        it(@"removes any parameters", ^ {
+            PlatformRequest *r = [[PlatformRequest alloc] initWithAccount:@"account" andFeed:@"feed"];
+            [r setParameterValue:@"fullTitle|asc" forKey:@"sort"];
+            [r setParameterValue:@"true" forKey:@"byHasReleases"];
+            [r clearParameters];
+            
+            [[theValue([[r makeRequest].URL.path rangeOfString:@"?"].location) should] equal:theValue(NSNotFound)];
+        });
+    });
+    
     describe(@"- makeRequest", ^{
         
         context(@"common properties", ^{

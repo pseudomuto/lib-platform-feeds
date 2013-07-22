@@ -53,6 +53,10 @@ describe(@"PlatformCategory", ^{
             [[[_category.properties objectForKey:@"showStatus"] shouldNot] beNil];
             [[[_category.properties objectForKey:@"showStatus"] should] equal:@"available"];
         });
+        
+        it(@"defaults hasReleases to NO", ^{
+            [[theValue(_category.hasReleases) should] beNo];
+        });
     });
 });
 
