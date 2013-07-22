@@ -49,7 +49,7 @@
 
 - (id)parseEntry:(id)entryObject
 {
-    @throw @"Not Implemented";
+    @throw [NSException exceptionWithName:@"NotImplementedException" reason:@"This method has not been implemented" userInfo:nil];
 }
 
 @end

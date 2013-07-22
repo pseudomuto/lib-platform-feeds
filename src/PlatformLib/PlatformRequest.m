@@ -16,6 +16,7 @@ static NSString *const kPlatformHost = @"feed.theplatform.com";
 @property (nonatomic, strong) NSMutableDictionary *parameters;
 
 - (NSString *)makeParameters;
+- (void)validateArgument:(NSString *)arg withMessage:(NSString *)message;
 @end
 
 @implementation PlatformRequest
@@ -23,11 +24,22 @@ static NSString *const kPlatformHost = @"feed.theplatform.com";
 - (id)initWithAccount:(NSString *)accountPID andFeed:(NSString *)feedPID
 {
     if((self = [super init])){
+        _endPoint = @"";
         self.accountPID = accountPID;
         self.feedPID = feedPID;
+        
+        [self validateArgument:self.accountPID withMessage:@"Account Id is not valid"];
+        [self validateArgument:self.feedPID withMessage:@"Feed Id is not valid"];
     }
     
     return self;
+}
+
+- (void)validateArgument:(NSString *)arg withMessage:(NSString *)message
+{
+    if(!arg || [arg isEqualToString:@""]) {
+        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:message userInfo:nil];
+    }
 }
 
 - (NSMutableDictionary *)parameters
